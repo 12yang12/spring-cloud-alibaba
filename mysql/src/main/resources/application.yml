@@ -1,0 +1,9 @@
+server:
+  port: 8040
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.138.127.205:3306/mysqlTest
+    username: root
+    password: root
