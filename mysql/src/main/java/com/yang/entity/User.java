@@ -1,4 +1,4 @@
-package com.yang;
+package com.yang.entity;
 
 public class User {
     private int id;
