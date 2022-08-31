@@ -1,7 +1,7 @@
 package com.yang.controller;
 
 import com.yang.entity.User;
-import com.yang.mapper.UserRowMapper;
+import com.yang.dao.UserRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 

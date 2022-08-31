@@ -1,4 +1,4 @@
-package com.yang.mapper;
+package com.yang.dao;
 
 import com.yang.entity.User;
 import org.springframework.jdbc.core.RowMapper;

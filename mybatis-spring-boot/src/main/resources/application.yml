@@ -1,0 +1,6 @@
+server:
+  port: 8050
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.yang.entity
+
