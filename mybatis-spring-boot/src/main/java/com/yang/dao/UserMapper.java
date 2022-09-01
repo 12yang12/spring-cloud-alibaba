@@ -10,13 +10,13 @@ import java.util.List;
 @Repository
 public interface UserMapper {
 
-    public List<User> findAllUser();
+    List<User> findAllUser();
 
-    public User findUserById(Integer id);
+    User findUserById(Integer id);
 
-    public int insertUser(User user);
+    int insertUser(User user);
 
-    public int updateUser(User user);
+    int updateUser(User user);
 
-    public int deleteById(Integer id);
+    int deleteUserById(Integer id);
 }
