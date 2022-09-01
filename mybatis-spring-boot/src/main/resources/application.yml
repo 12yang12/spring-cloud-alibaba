@@ -2,15 +2,13 @@ server:
   port: 8050
 
 mybatis:
-  mapper-locations: classpath:/mapper/*.xml
-#  type-aliases-package: com.yang.entity
+  mapper-locations: classpath:mapper/*.xml
 
 spring:
   datasource:
     url: jdbc:mysql://43.138.127.205:3306/mysqlTest
     username: root
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
 
 logging:
   level:

@@ -4,27 +4,33 @@
 <mapper namespace="com.yang.dao.UserMapper">
     <select id="findAllUser" resultType="com.yang.entity.User">
         select * from user;
+    <select id="findAllUser" resultType="com.yang.entity.User">
+
+        select * from user;
     </select>
 
     <select id="findUserById" parameterType="int" resultType="com.yang.entity.User">
         select * from user where id = #{id};
+    <select id="findUserById" resultType="com.yang.entity.User">
+        select * from user where id = #{id};
     </select>
 
     <insert id="insertUser" parameterType="com.yang.entity.User">
-        insert into user (name, age, sex) values (#{name}, #{age}, #{sex});
+        insert into user (name, age, sex)
+        values (#{name}, #{age}, #{sex});
     </insert>
 
-    <select id="updateUser" parameterType="com.yang.entity.User" resultType="Integer">
+    <update id="updateUser" parameterType="com.yang.entity.User">
         update user
         set name = #{name},
             age  = #{age},
-            sex  = #{sex})
+            sex  = #{sex}
         where id = #{id};
-    </select>
+    </update>
 
-    <select id="deleteById" parameterType="Integer" resultType="Integer">
+    <delete id="deleteUserById" parameterType="int">
         delete
         from user
         where id = #{id};
-    </select>
+    </delete>
 </mapper>

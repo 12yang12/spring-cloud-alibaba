@@ -18,11 +18,11 @@ public class UserController {
 
     @GetMapping("/findAllUser")
     public List<User> findAllUser() {
-       return userService.findAllUser();
+        return userService.findAllUser();
     }
 
     @GetMapping("/findUserById/{id}")
-    public User findUserById(@PathVariable int id) {
+    public User findUserById(@PathVariable Integer id) {
         return userService.findUserById(id);
     }
 
@@ -31,5 +31,13 @@ public class UserController {
         return userService.insertUser(user);
     }
 
+    @PostMapping("/updateUser")
+    public int updateUser(@RequestBody User user) {
+        return userService.updateUser(user);
+    }
 
+    @DeleteMapping("/deleteById/{id}")
+    public int deleteById(@PathVariable Integer id) {
+        return userService.deleteUserById(id);
+    }
 }
