@@ -4,14 +4,9 @@
 <mapper namespace="com.yang.dao.UserMapper">
     <select id="findAllUser" resultType="com.yang.entity.User">
         select * from user;
-    <select id="findAllUser" resultType="com.yang.entity.User">
-
-        select * from user;
     </select>
 
     <select id="findUserById" parameterType="int" resultType="com.yang.entity.User">
-        select * from user where id = #{id};
-    <select id="findUserById" resultType="com.yang.entity.User">
         select * from user where id = #{id};
     </select>
 
