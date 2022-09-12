@@ -1,0 +1,10 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: sentinel-dashboard
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8090

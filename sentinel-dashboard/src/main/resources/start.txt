@@ -1,0 +1,5 @@
+本地启动sentinel-dashboard
+java -Dserver.port=8090 -Dcsp.sentinel.dashboard.server=localhost:8090 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.3.jar
+
+sentinel-dashboard登录页面：http://localhost:8090
+登录的用户名和密码：sentinel/sentinel
