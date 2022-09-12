@@ -19,6 +19,7 @@
     <modules>
         <module>alibaba-sentinel</module>
         <module>redis</module>
+        <module>sentinel-dashboard</module>
     </modules>
 
     <properties>
