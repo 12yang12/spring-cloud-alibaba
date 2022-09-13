@@ -1,5 +1,6 @@
 server:
   port: 8091
+
 spring:
   application:
     name: sentinel-dashboard
@@ -7,4 +8,11 @@ spring:
     sentinel:
       transport:
         port: 8719
-        dashboard: localhost:8090
+        dashboard: 127.0.0.1:8090
+        clientIp: 127.0.0.1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
