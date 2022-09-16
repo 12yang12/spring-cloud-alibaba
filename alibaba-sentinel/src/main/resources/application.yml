@@ -1,2 +1,14 @@
 server:
   port: 8030
+spring:
+  application:
+    name: alibaba-sentinel
+  cloud:
+    sentinel:
+      datasource:
+        ds:  # ds：数据源名，可随意配置
+          file:
+            file: classpath:sentinel/flowRule.json
+            data-type: json
+            rule-type: flow
+
