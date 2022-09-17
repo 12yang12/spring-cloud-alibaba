@@ -1,0 +1,10 @@
+[
+  {
+    "resource": "hello",
+    "grade": 2,
+    "count": 1.0,
+    "timeWindow": 10,
+    "minRequestAmount": 1,
+    "statIntervalMs": 1000
+  }
+]

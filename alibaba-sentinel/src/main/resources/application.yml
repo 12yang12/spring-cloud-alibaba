@@ -6,9 +6,13 @@ spring:
   cloud:
     sentinel:
       datasource:
-        ds:  # ds：数据源名，可随意配置
+        flow :  # flow 是数据源名,可随意配置
           file:
-            file: classpath:sentinel/flowRule.json
+            file: classpath:sentinel/FlowRule.json
             data-type: json
             rule-type: flow
-
+        degrade:  # degrade 是数据源名,可随意配置
+          file:
+            file:  classpath:sentinel/DegradeRule.json
+            data-type: json
+            rule-type: degrade

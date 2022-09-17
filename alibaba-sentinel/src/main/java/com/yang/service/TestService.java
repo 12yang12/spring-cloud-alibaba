@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Service
 public class TestService {
 
-
     @SentinelResource(value = "hello", blockHandler = "helloBlockHandler", fallback = "helloFallback")
     public String hello(@PathVariable String name) throws Exception {
         if ("1".equals(name)) {
@@ -19,11 +18,11 @@ public class TestService {
 
     public String helloBlockHandler(String name, BlockException blockException) {
         System.out.println("Sentinel 限流");
-        return "Sentinel blockHandler";
+        return "Sentinel 限流";
     }
 
     public String helloFallback(String name, Throwable throwable) {
         System.out.println("Sentinel 熔断");
-        return "Sentinel helloFallback";
+        return "Sentinel 熔断";
     }
 }
