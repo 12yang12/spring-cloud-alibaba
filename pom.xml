@@ -20,6 +20,8 @@
         <module>alibaba-sentinel</module>
         <module>redis</module>
         <module>sentinel-dashboard</module>
+        <module>nacos</module>
+        <module>nacos-provider</module>
     </modules>
 
     <properties>
