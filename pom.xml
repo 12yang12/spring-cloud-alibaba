@@ -22,6 +22,7 @@
         <module>sentinel-dashboard</module>
         <module>nacos</module>
         <module>nacos-provider</module>
+        <module>nacos-consumer</module>
     </modules>
 
     <properties>
