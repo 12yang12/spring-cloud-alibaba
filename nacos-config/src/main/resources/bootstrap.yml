@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 43.138.127.205:8848
+        name: nacos-config.yaml
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        refresh-enabled: true
+  application:
+    name: nacos-config
