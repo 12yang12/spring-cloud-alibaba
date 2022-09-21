@@ -1,3 +1,8 @@
 server:
   port: 9001
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 43.138.127.205:8848
 
