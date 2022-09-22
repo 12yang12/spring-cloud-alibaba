@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-client
+  profiles:
+    active: dev
+  cloud:
+    config:
+      fail-fast: false
+      label: master
+      uri: http://localhost:9001
+      enabled: true
