@@ -33,6 +33,7 @@
         <module>sentinel-core</module>
         <module>sentinel-dashboard</module>
         <module>user</module>
+        <module>eureka-provider</module>
     </modules>
 
     <properties>
