@@ -34,6 +34,8 @@
         <module>sentinel-dashboard</module>
         <module>user</module>
         <module>eureka-provider</module>
+        <module>gateway</module>
+        <module>service-provider</module>
     </modules>
 
     <properties>
