@@ -1,5 +1,9 @@
 server:
-  port: 8765
+  port: 8766
 spring:
   application:
     name: service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 43.138.127.205:8848

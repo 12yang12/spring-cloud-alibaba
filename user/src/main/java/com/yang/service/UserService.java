@@ -19,4 +19,8 @@ public class UserService {
     public List<User> getUser(){
         return new ArrayList<>(userMap.values());
     }
+
+    public User getUserById(Integer id){
+        return userMap.getOrDefault(id, new User(id, "", -1, ""));
+    }
 }
