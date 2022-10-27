@@ -2,7 +2,7 @@ server:
   port: 8301
 
 rocketmq:
-  name-server: 127.0.0.1:9876
+  name-server: localhost:9876
   producer:
     group: producerGroup
   consumer:
