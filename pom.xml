@@ -30,6 +30,7 @@
         <module>nacos-provider</module>
         <module>openfeign</module>
         <module>redis</module>
+        <module>redisson</module>
         <module>rocketmq</module>
         <module>sentinel-core</module>
         <module>sentinel-dashboard</module>
