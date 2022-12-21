@@ -1,12 +1,14 @@
 package com.yang.controller;
 
 import com.yang.service.RedisService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class RedisController {
     private final RedisService redisService;
 
+    @Autowired
     public RedisController(RedisService redisService) {
         this.redisService = redisService;
     }
