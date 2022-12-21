@@ -33,6 +33,7 @@
         <module>rocketmq</module>
         <module>sentinel-core</module>
         <module>sentinel-dashboard</module>
+        <module>spring-aop</module>
         <module>user</module>
         <module>eureka-provider</module>
         <module>gateway</module>
