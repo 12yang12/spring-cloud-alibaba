@@ -2,6 +2,7 @@ package com.yang.controller;
 
 import com.yang.service.RedisLock;
 import com.yang.service.RedisService;
+import com.yang.service.RedissonLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +12,13 @@ import java.util.concurrent.TimeUnit;
 public class RedisController {
     private final RedisService redisService;
     private final RedisLock redisLock;
+    private final RedissonLock redissonLock;
 
     @Autowired
-    public RedisController(RedisService redisService, RedisLock redisLock) {
+    public RedisController(RedisService redisService, RedisLock redisLock, RedissonLock redissonLock) {
         this.redisService = redisService;
         this.redisLock = redisLock;
+        this.redissonLock = redissonLock;
     }
 
     @GetMapping("/getString/{key}")
@@ -48,4 +51,11 @@ public class RedisController {
     public Long releaseLock(@RequestParam("key") String key, @RequestParam("value") String value) {
         return redisLock.releaseLock(key, value);
     }
+
+
+    @GetMapping("/lock")
+    public boolean lock(@RequestParam("key") String key) {
+        return redissonLock.lock(key);
+    }
+
 }

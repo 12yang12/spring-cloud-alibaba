@@ -13,18 +13,23 @@ public class RedissonLock {
         this.redissonClient = redissonClient;
     }
 
-    public void doSometingWithLock() {
-        String key = "";
+    public boolean lock(String key) {
         RLock lock = redissonClient.getLock(key);
-        try {
-            boolean lockResult = lock.tryLock();
-            if (lockResult) {
-                System.out.println("业务逻辑");
+        boolean lockResult = lock.tryLock();
+        if (lockResult) {
+            try {
+                System.out.println("抢锁成功");
+                System.out.println("执行业务逻辑");
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                lock.unlock();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            lock.unlock();
+        } else {
+            System.out.println("抢锁失败");
         }
+
+        return lockResult;
     }
+
 }
