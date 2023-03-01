@@ -24,9 +24,9 @@ public class RedisService {
     }
 
 
-    public void setHash(String key, String filedKey, String value) {
+    public void setHash(String key, String filedKey, String filedValue) {
         HashOperations<String, Object, Object> hashOperations = redisTemplate.opsForHash();
-        hashOperations.put(key, filedKey, value);
+        hashOperations.put(key, filedKey, filedValue);
     }
 
     public String getHash(String key, String filedKey){

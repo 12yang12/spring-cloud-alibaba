@@ -35,6 +35,7 @@ public class RedisLock {
         DefaultRedisScript<Long> redisScript = new DefaultRedisScript<>();
         redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("delKey.lua")));
         redisScript.setResultType(Long.class);
+
         Long executeResult = redisTemplate.execute(redisScript, Collections.singletonList(key), value.toString());
         System.out.println("释放锁结果: " + executeResult);
         return executeResult;
