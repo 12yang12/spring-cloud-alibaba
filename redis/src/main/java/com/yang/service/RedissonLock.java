@@ -2,9 +2,8 @@ package com.yang.service;
 
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class RedissonLock {
 
     private final RedissonClient redissonClient;

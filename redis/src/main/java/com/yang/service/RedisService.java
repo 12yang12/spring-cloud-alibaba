@@ -3,9 +3,8 @@ package com.yang.service;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class RedisService {
 
     private final RedisTemplate<String, Object> redisTemplate;
