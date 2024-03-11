@@ -9,12 +9,12 @@ end
 local maxValue = tonumber(ARGV[1])
 
 -- 自增序列值
-local incrementedValue = redis.call('INCR', KEYS[1])
+local nextValue = redis.call('INCR', KEYS[1])
 
 -- 如果自增后的值超过最大值，则重新从1开始
-if incrementedValue > maxValue then
+if nextValue > maxValue then
     redis.call('SET', KEYS[1], 1)
-    incrementedValue = 1
+    nextValue = 1
 end
 
-return incrementedValue
+return nextValue
